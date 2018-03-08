@@ -37,13 +37,13 @@ class DeliveryEditPage extends AbstractAdminPageStyleGuide
 
     public function 入力_全国一律送料($value) {
         $this->tester->fillField(['id' => 'delivery_free_all'], $value);
-        $this->tester->click('#form1 #set_fee_all');
+        $this->tester->click('#set_fee_all');
         return $this;
     }
 
     public function 登録()
     {
-        $this->tester->click(['xpath' => '//form[@id="form1"]//button[text()="登録"]']);
+        $this->tester->click(['xpath' => '//*[@id="page_admin_setting_shop_delivery_new"]/div[1]/div[3]/form/div[2]/div/div/div[2]/div/div/button']);
         return $this;
     }
 
